@@ -77,14 +77,14 @@ function Topbar() {
                 </MenuItem>
               </Link>
             </NextLink>
-            <NextLink href="/about" passHref>
+            <NextLink href="/" passHref>
               <Link>
                 <MenuItem icon={<ChevronRightIcon />} href="/" passHref>
                   {lenguageNow?.topBar?.about}
                 </MenuItem>
               </Link>
             </NextLink>
-            <NextLink href="/projects" passHref>
+            <NextLink href="/" passHref>
               <Link>
                 <MenuItem icon={<ChevronRightIcon />} href="/" passHref>
                   {lenguageNow?.topBar?.projects}
@@ -97,10 +97,10 @@ function Topbar() {
           <NextLink href="/" passHref>
             <Link mr={8}>{lenguageNow?.topBar?.home}</Link>
           </NextLink>
-          <NextLink href="/about" passHref>
+          <NextLink href="/" passHref>
             <Link mr={8}> {lenguageNow?.topBar?.about}</Link>
           </NextLink>
-          <NextLink href="/about" passHref>
+          <NextLink href="/" passHref>
             <Link>{lenguageNow?.topBar?.projects}</Link>
           </NextLink>
         </Flex>
