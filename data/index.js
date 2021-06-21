@@ -1,5 +1,5 @@
 import React from "react";
-import git from "../images/icons/git.png"
+import git from "../images/icons/git.png";
 import javascript from "../images/icons/javascript.png";
 import mongodb from "../images/icons/mongodb.png";
 import nextjs from "../images/icons/nextjs.png";
@@ -27,7 +27,6 @@ import babel from "../images/icons/babel.png";
 import figma from "../images/icons/figma.png";
 import firebase from "../images/icons/firebase.png";
 
-
 export const ptBr = {
   topBar: {
     home: "Home",
@@ -36,6 +35,11 @@ export const ptBr = {
   },
   hero: {
     text: "Desenvolvedor Front-end",
+  },
+  modal: {
+    title: "E-mail para contato",
+    button: "Copiar",
+    buttonMsg: "Copiado!",
   },
   about: {
     title: "Um pouco sobre mim",
@@ -57,6 +61,11 @@ export const enUs = {
   hero: {
     text: "Front-end Developer",
   },
+  modal: {
+    title: "Contact Email",
+    button: "Copy",
+    buttonMsg: "Copied!",
+  },
   about: {
     title: "A little about me",
     hello: "Hello! I'm Flavio Rocha",
@@ -69,11 +78,31 @@ export const enUs = {
 };
 
 export const img = [
-  { url: javascript, name: "Javascript" },
-  { url: typescript, name: "Typescript" },
-  { url: html, name: "HTML" },
-  { url: css, name: "CSS" },
-  { url: react, name: "React.js" },
+  {
+    url: javascript,
+    name: "Javascript",
+    text: "Dom Manipulation - Fetch API - Jquery - Ajax(XHR) - Modular JS - Scope - Prototype - Scope - Hosting - Shadow DOM - Prototype - Strict - Array Manipulation (MAP, Filter, Reduce) - Modules - Proxy JS - EcmaScript 6+",
+  },
+  {
+    url: typescript,
+    name: "Typescript",
+    text: "Interfaces - Types - Dom Manipulation - Fetch API - Jquery - Ajax(XHR) - Modular JS - Scope - Prototype - Scope - Hosting - Shadow DOM - Prototype - Strict - Array Manipulation (MAP, Filter, Reduce) - Modules - Proxy JS - EcmaScript 6+",
+  },
+  {
+    url: html,
+    name: "HTML",
+    text: "Semantic HTML - Forms & Validations - Conventions and Best Practices",
+  },
+  {
+    url: css,
+    name: "CSS",
+    text: "Positioning - Display - Making Layouts - Floats - Box Model - CSS Grid - Flex Box",
+  },
+  {
+    url: react,
+    name: "React.js",
+    text: "Class Components - State & Cycle Life - Function Components - Hooks - Context - Portals - Styled Component - Redux - Context API",
+  },
   { url: vue, name: "Vue.js" },
   { url: angular, name: "Angular.js" },
   { url: nextjs, name: "Next.js" },

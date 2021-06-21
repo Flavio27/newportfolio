@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import {
   useColorMode,
@@ -9,20 +10,30 @@ import {
   Stack,
   Link,
   Icon,
-} from "@chakra-ui/react";
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  useDisclosure,
+  AlertDialogCloseButton,
+  Button,
+  useClipboard,
+  Input
+} from "@chakra-ui/react"
 import {
   FaLinkedin,
   FaGithub,
   FaMailBulk,
 } from "react-icons/fa";
 
-import test from "../images/git.png";
+
 import Writer from "src/components/Writer";
 import WriterEn from "src/components/WriterEn";
 import useAuth from "src/hooks/useAuth";
 
 
-function Hero(props) {
+function Hero({ props }) {
   const { lenguage, setLenguage } = useAuth();
   const [apiData, setApiData] = useState({});
   const { colorMode, toggleColorMode } = useColorMode();
@@ -30,6 +41,10 @@ function Hero(props) {
   const darkTheme = "linear(to-l, #743ad5, #011627)";
   const bg = useColorModeValue(whiteTheme, darkTheme);
   const iconsSize = [6, 8, 10, 10];
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = React.useRef()
+  const [value, setValue] = React.useState("email@flaviorocha.com")
+  const { hasCopied, onCopy } = useClipboard(value)
 
   const gitApi = async () => {
     const response = await fetch("https://api.github.com/users/Flavio27");
@@ -76,11 +91,36 @@ function Hero(props) {
           <Link href="https://www.linkedin.com/in/flavio-rocha-bb0b53171/" target="_blank">
             <Icon w={iconsSize} h={iconsSize} as={FaLinkedin} />
           </Link>
-          <Link href="https://www.youtube.com/" target="_blank">
-            <Icon w={iconsSize} h={iconsSize} as={FaMailBulk} />
+          <Link>
+            <Icon w={iconsSize} h={iconsSize} as={FaMailBulk} onClick={onOpen} />
           </Link>
         </Stack>
       </Box>
+      <>
+        <AlertDialog
+          motionPreset="slideInBottom"
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+          isOpen={isOpen}
+          isCentered
+        >
+          <AlertDialogOverlay />
+          <AlertDialogContent bg={colorMode === "dark" ? "#011627" : "#e1e1e1"}>
+            <AlertDialogHeader>{props?.modal?.title}</AlertDialogHeader>
+            <AlertDialogCloseButton />
+            <AlertDialogBody>
+              <>
+                <Flex mb={2}>
+                  <Input value={value} isReadOnly placeholder={value} />
+                  <Button onClick={onCopy} ml={2} autoFocus bg={hasCopied ? "#0abb1344" : ""}>
+                    {hasCopied ? props?.modal?.buttonMsg : props?.modal?.button}
+                  </Button>
+                </Flex>
+              </>
+            </AlertDialogBody>
+          </AlertDialogContent>
+        </AlertDialog>
+      </>
     </Flex>
   );
 }
