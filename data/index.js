@@ -1,4 +1,3 @@
-import React from "react";
 import git from "../images/icons/git.png";
 import javascript from "../images/icons/javascript.png";
 import mongodb from "../images/icons/mongodb.png";
@@ -23,7 +22,9 @@ import json from "../images/icons/json.png";
 import postman from "../images/icons/postman.png";
 import insomnia from "../images/icons/insomnia.png";
 import npm from "../images/icons/npm.png";
+import yarn from "../images/icons/yarn.png";
 import babel from "../images/icons/babel.png";
+import webpack from "../images/icons/webpack.png";
 import figma from "../images/icons/figma.png";
 import firebase from "../images/icons/firebase.png";
 
@@ -81,12 +82,12 @@ export const img = [
   {
     url: javascript,
     name: "Javascript",
-    text: "Dom Manipulation - Fetch API - Jquery - Ajax(XHR) - Modular JS - Scope - Prototype - Scope - Hosting - Shadow DOM - Prototype - Strict - Array Manipulation (MAP, Filter, Reduce) - Modules - Proxy JS - EcmaScript 6+",
+    text: "Dom Manipulation - Fetch API - Jquery - Ajax(XHR) - Modular JS - Scope - Prototype - Scope - Hosting - Shadow DOM - Prototype - Strict - Array Manipulation (MAP, Filter, Reduce) - Modules - Proxy JS - EcmaScript 6+ ...",
   },
   {
     url: typescript,
     name: "Typescript",
-    text: "Interfaces - Types - Dom Manipulation - Fetch API - Jquery - Ajax(XHR) - Modular JS - Scope - Prototype - Scope - Hosting - Shadow DOM - Prototype - Strict - Array Manipulation (MAP, Filter, Reduce) - Modules - Proxy JS - EcmaScript 6+",
+    text: "Interfaces - Types - Dom Manipulation - Fetch API - Jquery - Ajax(XHR) - Modular JS - Scope - Prototype - Scope - Hosting - Shadow DOM - Prototype - Strict - Array Manipulation (MAP, Filter, Reduce) - Modules - Proxy JS - EcmaScript 6+ ...",
   },
   {
     url: html,
@@ -101,7 +102,7 @@ export const img = [
   {
     url: react,
     name: "React.js",
-    text: "Class Components - State & Cycle Life - Function Components - Hooks - Context - Portals - Styled Component - Redux - Context API",
+    text: "Class Components - Function Components - State & Cycle Life - Hooks - Custom Hooks - Context - Portals - Redux - Optimization - JSX - TSX",
   },
   { url: vue, name: "Vue.js" },
   { url: angular, name: "Angular.js" },
@@ -115,14 +116,60 @@ export const img = [
   { url: jest, name: "Jest" },
   { url: node, name: "Node.js" },
   { url: mongodb, name: "MongoDB" },
-  { url: firebase, name: "FireBase" },
-  { url: git, name: "GIT" },
-  { url: github, name: "Github" },
-  { url: json, name: "Json" },
-  { url: babel, name: "Babel" },
-  { url: npm, name: "NPM" },
-  { url: figma, name: "Figma" },
-  { url: vscode, name: "VSCode" },
-  { url: postman, name: "Postman" },
-  { url: insomnia, name: "Insomnia" },
+  {
+    url: firebase,
+    name: "FireBase",
+    text: "Authentication - Realtime Database - Firestore Database - Hosting",
+  },
+  { url: git, name: "GIT", text: "Code Versioning" },
+  {
+    url: github,
+    name: "Github",
+    text: "Code hosting with GIT - Repository creation - GithubPages - Contributions - Pull Requests",
+  },
+  {
+    url: json,
+    name: "Json",
+    text: "Consumption and creation of Json files mainly in REST APIS",
+  },
+  {
+    url: babel,
+    name: "Babel",
+    text: "How transpile works - ECMAScript versions - Convert ECMAScript versions",
+  },
+  {
+    url: webpack,
+    name: "Webpack",
+    text: "How works - Operation - Minification of files - Build/Bundle",
+  },
+  {
+    url: npm,
+    name: "NPM",
+    text: "Commands - Creation and installation of libraries and frameworks",
+  },
+  {
+    url: yarn,
+    name: "YARN",
+    text: "Commands - Creation and installation of libraries and frameworks",
+  },
+  {
+    url: figma,
+    name: "Figma",
+    text: "Project prototyping - Design - Web & Mobile project",
+  },
+  {
+    url: vscode,
+    name: "VSCode",
+    text: "Extensions - Plugins - Commands - Hacks - Configuration ",
+  },
+  {
+    url: postman,
+    name: "Postman",
+    text: "GET -  POST - PUT & DELETE. To consume or send data of REST APIS",
+  },
+  {
+    url: insomnia,
+    name: "Insomnia",
+    text: "GET - POST - PUT & DELETE. To consume or send data of REST APIS",
+  },
 ];
