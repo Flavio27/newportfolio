@@ -58,6 +58,7 @@ function Skills({ props }) {
         direction="column"
         mt={["55px", "110px", "110px", "110px"]}
         pb={50}
+        id={props.language === "ptBr" ? "habilidades" : "skills"}
 
       >
         <Flex justify="right">

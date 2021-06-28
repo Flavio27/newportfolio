@@ -17,7 +17,7 @@ function Layout({ children }) {
       <Flex flexDirection="column" pt="62px">
         <Box
           h="1px"
-          maxW={["100%", "100%", "300px", "300px"]}
+          maxW={["100%", "100%", "400px", "400px"]}
           className={
             colorMode === "light" ? "line-gradient-white" : "line-gradient-dark"
           }

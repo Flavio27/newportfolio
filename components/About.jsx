@@ -35,6 +35,7 @@ function About({ props }) {
           px={[4, 8]}
           direction="column"
           position="relative"
+          id={props.language === "ptBr" ? "sobre" : "about"}
         >
           <Box mt={20} maxW={["800px", "800px", "800px", "600px", "750px"]}>
             <Flex>
@@ -42,7 +43,7 @@ function About({ props }) {
                 <Text fontSize={["lg", "4xl"]} color="#00BFA6">
                   {props?.about?.title}
                 </Text>
-                <Divider mb={6} />
+                <Divider mb={6}/>
                 <strong>{props?.about?.hello} 🤚 </strong>
                 <br />
                 {props?.about?.text}

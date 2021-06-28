@@ -35,9 +35,9 @@ function Topbar() {
   const color = useColorModeValue("#1A202C", "#EDEEEE");
 
   useEffect(() => {
-    if(lenguage === "ptBr"){
+    if (lenguage === "ptBr") {
       setLenguageNow(ptBr);
-    }else{
+    } else {
       setLenguageNow(enUs);
     }
   }, [lenguage]);
@@ -70,23 +70,30 @@ function Topbar() {
             display={["flex", "flex", "none", "none"]}
           />
           <MenuList>
-            <NextLink href="/" passHref>
+            <NextLink href="/#" passHref>
               <Link>
                 <MenuItem icon={<ChevronRightIcon />} href="/" passHref>
                   {lenguageNow?.topBar?.home}
                 </MenuItem>
               </Link>
             </NextLink>
-            <NextLink href="/" passHref>
+            <NextLink   href={lenguage === "ptBr" ? "/#sobre" : "/#about"} passHref>
               <Link>
-                <MenuItem icon={<ChevronRightIcon />} href="/" passHref>
+                <MenuItem icon={<ChevronRightIcon />}>
                   {lenguageNow?.topBar?.about}
                 </MenuItem>
               </Link>
             </NextLink>
-            <NextLink href="/" passHref>
+            <NextLink href={lenguage === "ptBr" ? "/#habilidades" : "/#skills"} passHref>
               <Link>
-                <MenuItem icon={<ChevronRightIcon />} href="/" passHref>
+                <MenuItem icon={<ChevronRightIcon />}>
+                  {lenguageNow?.topBar?.skills}
+                </MenuItem>
+              </Link>
+            </NextLink>
+            <NextLink href={lenguage === "ptBr" ? "/#projetos" : "/#projects"} passHref>
+              <Link>
+                <MenuItem icon={<ChevronRightIcon />}>
                   {lenguageNow?.topBar?.projects}
                 </MenuItem>
               </Link>
@@ -94,13 +101,22 @@ function Topbar() {
           </MenuList>
         </Menu>
         <Flex alignItems="center" display={["none", "none", "flex", "flex"]}>
-          <NextLink href="/" passHref>
+          <NextLink href="/#" passHref>
             <Link mr={8}>{lenguageNow?.topBar?.home}</Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink
+            href={lenguage === "ptBr" ? "/#sobre" : "/#about"}
+            scroll={true}
+          >
             <Link mr={8}> {lenguageNow?.topBar?.about}</Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink
+             href={lenguage === "ptBr" ? "/#habilidades" : "/#skills"}
+            scroll={true}
+          >
+            <Link mr={8}> {lenguageNow?.topBar?.skills}</Link>
+          </NextLink>
+          <NextLink href={lenguage === "ptBr" ? "/#projetos" : "/#projects"}>
             <Link>{lenguageNow?.topBar?.projects}</Link>
           </NextLink>
         </Flex>

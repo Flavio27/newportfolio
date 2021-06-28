@@ -25,6 +25,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaMailBulk,
+  FaWhatsappSquare
 } from "react-icons/fa";
 
 
@@ -72,6 +73,7 @@ function Hero({ props }) {
       bgGradient={bg}
       direction="column"
       mt={["80px", "150px", "160px", "160px"]}
+      id="hero"
     >
       <Box mt={[-150, -300, -300, -300]} position="absolute">
         <Image
@@ -85,14 +87,17 @@ function Hero({ props }) {
       </Heading>
       <Box mt={5}>
         <Stack direction="row" spacing={6} mb={[-10, -10, -10, -10, -10]} mt={[-5, 0, 0, 0, 0]}>
-          <Link href="https://github.com/Flavio27" target="_blank">
+          <Link href="https://github.com/Flavio27" target="_blank" className="social-icons">
             <Icon w={iconsSize} h={iconsSize} as={FaGithub} />
           </Link>
-          <Link href="https://www.linkedin.com/in/flavio-rocha-bb0b53171/" target="_blank">
+          <Link href="https://www.linkedin.com/in/flavio-rocha-bb0b53171/" target="_blank" className="social-icons">
             <Icon w={iconsSize} h={iconsSize} as={FaLinkedin} />
           </Link>
+          <Link href="https://api.whatsapp.com/send?phone=5512982822978" target="_blank" className="social-icons">
+            <Icon w={iconsSize} h={iconsSize} as={FaWhatsappSquare} />
+          </Link>
           <Link>
-            <Icon w={iconsSize} h={iconsSize} as={FaMailBulk} onClick={onOpen} />
+            <Icon w={iconsSize} h={iconsSize} as={FaMailBulk} onClick={onOpen} className="social-icons"/>
           </Link>
         </Stack>
       </Box>

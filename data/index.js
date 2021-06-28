@@ -29,9 +29,11 @@ import figma from "../images/icons/figma.png";
 import firebase from "../images/icons/firebase.png";
 
 export const ptBr = {
+  language: 'ptBr',
   topBar: {
     home: "Home",
     about: "Sobre",
+    skills: "Habilidades",
     projects: "Projetos",
   },
   hero: {
@@ -54,9 +56,11 @@ export const ptBr = {
 };
 
 export const enUs = {
+  language: 'enUs',
   topBar: {
     home: "Home",
     about: "About",
+    skills: "Skills",
     projects: "Projects",
   },
   hero: {
