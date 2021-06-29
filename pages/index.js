@@ -4,6 +4,7 @@ import Layout from "src/components/Layout";
 import Hero from "src/components/Hero";
 import About from "../components/About";
 import Skills from "src/components/Skills";
+import Projects from "src/components/Projects";
 import { ptBr, enUs } from "data";
 import useAuth from "src/hooks/useAuth";
 

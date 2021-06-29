@@ -15,7 +15,7 @@ import github from "../images/icons/github.png";
 import jest from "../images/icons/jest.png";
 import bootstrap from "../images/icons/bootstrap.png";
 import materialui from "../images/icons/materialui.png";
-import sass from "../images/icons/sass.png";
+import sass from "../images/icons/scss.png";
 import chakraui from "../images/icons/chakraui.png";
 import tailwind from "../images/icons/tailwind.png";
 import json from "../images/icons/json.png";
@@ -27,6 +27,14 @@ import babel from "../images/icons/babel.png";
 import webpack from "../images/icons/webpack.png";
 import figma from "../images/icons/figma.png";
 import firebase from "../images/icons/firebase.png";
+
+export const icons = {
+  javascript,
+  css,
+  typescript,
+  scss: sass,
+  html,
+}
 
 export const ptBr = {
   language: 'ptBr',

@@ -19,7 +19,6 @@ import {
   ChevronRightIcon,
   HamburgerIcon,
 } from "@chakra-ui/icons";
-import Writer from "./Writer";
 import withAuthModal from "./Auth";
 import braIcon from "../images/icons/braIcon.png";
 import euaIcon from "../images/icons/euaIcon.png";
@@ -70,7 +69,7 @@ function Topbar() {
             display={["flex", "flex", "none", "none"]}
           />
           <MenuList>
-            <NextLink href="/#" passHref>
+            <NextLink href="/" passHref>
               <Link>
                 <MenuItem icon={<ChevronRightIcon />} href="/" passHref>
                   {lenguageNow?.topBar?.home}
@@ -91,7 +90,7 @@ function Topbar() {
                 </MenuItem>
               </Link>
             </NextLink>
-            <NextLink href={lenguage === "ptBr" ? "/#projetos" : "/#projects"} passHref>
+            <NextLink href={"/projects"} passHref>
               <Link>
                 <MenuItem icon={<ChevronRightIcon />}>
                   {lenguageNow?.topBar?.projects}
@@ -101,7 +100,7 @@ function Topbar() {
           </MenuList>
         </Menu>
         <Flex alignItems="center" display={["none", "none", "flex", "flex"]}>
-          <NextLink href="/#" passHref>
+          <NextLink href="/" passHref>
             <Link mr={8}>{lenguageNow?.topBar?.home}</Link>
           </NextLink>
           <NextLink
@@ -116,7 +115,7 @@ function Topbar() {
           >
             <Link mr={8}> {lenguageNow?.topBar?.skills}</Link>
           </NextLink>
-          <NextLink href={lenguage === "ptBr" ? "/#projetos" : "/#projects"}>
+          <NextLink href={"/projects"}>
             <Link>{lenguageNow?.topBar?.projects}</Link>
           </NextLink>
         </Flex>

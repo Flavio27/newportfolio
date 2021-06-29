@@ -37,10 +37,17 @@ html {
   opacity: 1;
 }
 
-.social-icons{
+.social-icons {
   transition: filter 0.2;
 }
-.social-icons:hover{
-  filter: brightness(0.8)
+.social-icons:hover {
+  filter: brightness(0.8);
 }
 
+.project-name {
+  transition: filter 0.2;
+}
+.project-name:hover {
+  transition: filter 0.2;
+  text-decoration: underline;
+}
