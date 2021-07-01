@@ -18,13 +18,12 @@ html {
 
 .line-gradient-dark {
   background: linear-gradient(to left, #743ad5, #29f3c3);
-  height: 1px;
-  z-index: 999999;
+
 }
 
 .line-gradient-white {
   background: linear-gradient(to right, #6b6b6b, #cecece);
-  height: 1px;
+
 }
 
 .grow-skills {

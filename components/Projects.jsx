@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import {Box, Image, Flex, CircularProgress} from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Flex,
+  CircularProgress,
+  Text,
+  Badge,
+} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import { icons } from "../data";
-import Aos from 'aos';
-import "aos/dist/aos.css"
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-
-function Project({ name, languages_url, html_url }) {
+function Project({ name, languages_url, html_url, created_at }) {
   const [languagesType, setLanguagesType] = useState();
   const [imgIcons, setImgIcons] = useState({});
 
@@ -16,10 +22,10 @@ function Project({ name, languages_url, html_url }) {
     setLanguagesType(Object.keys(await data));
     return;
   }
-  
+
   useEffect(() => {
     technologies();
-    setImgIcons(icons)
+    setImgIcons(icons);
     Aos.init({});
   }, []);
 
@@ -40,19 +46,27 @@ function Project({ name, languages_url, html_url }) {
           as="h4"
           lineHeight="tight"
           isTruncated
-          fontSize="lg"
+          fontSize={["lg", "2xl"]}
         >
-          <a href={html_url} target="_blank" className="project-name">{name}</a>
+          <a href={html_url} target="_blank" className="project-name">
+            {name}
+          </a>
         </Box>
         <Flex>
           {languagesType?.map((tec, index) => (
-            <span style={{ marginRight: 5 }} key={tec}>
-              <Image src={imgIcons[tec?.toLowerCase()]} boxSize={25} style={{margin: "10px 0px"}} />
-            </span>
+            <Box mr={5} align="center" key={tec}>
+              <Image
+                src={imgIcons[tec?.toLowerCase()]}
+                boxSize={25}
+                style={{ margin: "10px 0px" }}
+              />
+              <Text fontSize="sm">{tec}</Text>
+            </Box>
           ))}
-          <Box as="span" color="gray.600" fontSize="sm">
-          </Box>
         </Flex>
+        <Box as="span" color="gray.600" fontSize="sm">
+          Created at: {created_at.slice(0, 10)}
+        </Box>
       </Box>
     </Box>
   );
@@ -78,7 +92,7 @@ function Projects(props) {
     <Box align="center">
       {loading && <CircularProgress isIndeterminate color="#00BFA6" />}
       {repos.map((repo) => (
-        <Project {...repo} key={repo.name}/>
+        <Project {...repo} key={repo.name} />
       ))}
     </Box>
   );

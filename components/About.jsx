@@ -22,7 +22,7 @@ function About({ props }) {
         data-aos="fade-left"
         src={GitIcon}
         position="absolute"
-        right={["0px", "0px", "0px", "0px", "150px"]}
+        right={["0px", "0px", "0px", "0px", "0px"]}
         mt="8"
         display={["none", "none", "none", "flex"]}
         boxSize={["200px", "300px", "400px", "600px"]}
