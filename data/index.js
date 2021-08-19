@@ -55,7 +55,7 @@ export const ptBr = {
   about: {
     title: "Um pouco sobre mim",
     hello: "Olá! Sou Flavio Rocha",
-    text: "Desenvolvedor Front-End, formado em Análise e Desenvolvimento de Sistemas - FATEC em 2018. Posso dizer que sou uma pessoa extremamente apaixonada por tecnologia e inovação, sempre tentando me manter atualizado das mais novas tecnologias do mercado. Buscando sempre novos desafios, para aprimorar meus conhecimentos. Atuando desde 2015 como desenvolvedor web principalmente na are de front-end.",
+    text: "Desenvolvedor Front-End, formado em Análise e Desenvolvimento de Sistemas - FATEC em 2018. Posso dizer que sou uma pessoa extremamente apaixonada por tecnologia e inovação, sempre tentando me manter atualizado das mais novas tecnologias do mercado. Buscando sempre novos desafios, para aprimorar meus conhecimentos. Atuando desde 2015 como desenvolvedor web principalmente na area de front-end.",
   },
   skills: {
     title: "Habilidades",
